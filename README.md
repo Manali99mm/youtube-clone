@@ -4,12 +4,12 @@ YouTube clone with Vanilla JS and NodeJS
 
 ## Pages:
 
-- [ ] Home
+- [x] Home
 - [x] Join
 - [x] Login
 - [x] Search
 - [ ] User Detail
 - [ ] Edit Profile
 - [ ] Change Password
-- [ ] Upload
+- [x] Upload
 - [ ] Video Detail
