@@ -1,0 +1,9 @@
+extends layouts/main.pug 
+
+block content 
+    .form-container
+        form(action=routes.login, method="post")
+            input(type="text", name="video-title", placeholder="Title")
+            textarea(placeholder="Description", name="video-description",  cols="20", rows="3")
+            input(type="submit", value="Update Video")
+        a.form-container__link(href=routes.deleteVideo) Delete Video
