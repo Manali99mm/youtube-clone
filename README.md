@@ -12,4 +12,5 @@ YouTube clone with Vanilla JS and NodeJS
 - [ ] Edit Profile
 - [ ] Change Password
 - [x] Upload
-- [ ] Video Detail
+- [x] Video Detail
+- [x] Edit Video
