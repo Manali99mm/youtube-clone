@@ -1,11 +1,13 @@
 import mongoose from "mongoose";
 import dotenv from "dotenv";
+
 dotenv.config();
 
 mongoose.connect(
     process.env.MONGO_URL,
     {
         useNewUrlParser: true,
+        useFindAndModify: true,
         useUnifiedTopology: true
     }
 ); 
@@ -13,7 +15,8 @@ mongoose.connect(
 const db = mongoose.connection;
 
 const handleOpen = () => console.log("✅ Connected to DB");
-const handleError = () => console.log("Error on DB connection: ${error}");
+const handleError = (error) => console.log(`Error on DB connection: ${error}`);
 
 db.once("open", handleOpen);
 db.on("error", handleError);
+
