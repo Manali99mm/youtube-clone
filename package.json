@@ -2,33 +2,49 @@
   "name": "youtube-clone",
   "version": "1.0.0",
   "description": "",
-  "type": "module",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "start": "nodemon --exec babel-node init.js"
+    "dev:server": "nodemon --exec babel-node init.js",
+    "dev:assets": "cross-env WEBPACK_ENV=development webpack -w",
+    "build:assets": "cross-env WEBPACK_ENV=production webpack"
   },
   "author": "Manali Mathur",
   "license": "ISC",
   "dependencies": {
     "@babel/core": "^7.13.16",
     "@babel/node": "^7.13.13",
+    "@babel/polyfill": "^7.12.1",
     "@babel/preset-env": "^7.13.15",
+    "autoprefixer": "^10.2.5",
+    "babel-loader": "^8.2.2",
     "cookie-parser": "^1.4.5",
+    "cross-env": "^7.0.3",
+    "css-loader": "^5.2.4",
     "dotenv": "^8.2.0",
     "express": "^4.17.1",
+    "extract-text-webpack-plugin": "^4.0.0-beta.0",
     "helmet": "^4.5.0",
     "mongoose": "^5.12.6",
     "morgan": "^1.10.0",
     "multer": "^1.4.2",
-    "pug": "^3.0.2"
+    "node-sass": "^5.0.0",
+    "postcss": "^8.2.13",
+    "postcss-loader": "^5.2.0",
+    "pug": "^3.0.2",
+    "sass-loader": "^11.0.1",
+    "webpack": "^5.36.1",
+    "webpack-cli": "^4.6.0"
   },
   "devDependencies": {
     "eslint": "^7.25.0",
     "eslint-config-airbnb-base": "^14.2.1",
     "eslint-config-prettier": "^8.3.0",
     "eslint-plugin-import": "^2.22.1",
-    "nodemon": "^2.0.7"
+    "mini-css-extract-plugin": "^1.6.0",
+    "nodemon": "^2.0.7",
+    "postcss-preset-env": "^6.7.0",
+    "webpack-dev-server": "^3.11.2"
   },
   "babel": {
     "presets": [
