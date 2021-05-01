@@ -4,6 +4,7 @@ block content
     .form-container
         form(action=routes.editVideo(video.id), method="post")
             input(type="text", name="videoTitle", placeholder="Title", value=video.title)
-            textarea(placeholder="Description", name="videoDescription", cols="20", rows="3")=video.description
+            textarea(placeholder="Description", name="videoDescription")=video.description
             input(type="submit", value="Update Video")
-        a.form-container__link(href=routes.deleteVideo(video.id)) Delete Video
+        a.form-container__link(href=routes.deleteVideo(video.id)) 
+            button.delete Delete Video
