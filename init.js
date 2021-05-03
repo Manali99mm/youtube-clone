@@ -3,6 +3,7 @@ import dotenv from "dotenv";
 import app from "./app.js";
 import "./models/Video.js";
 import "./models/Comment.js";
+import "./models/User.js";
 
 dotenv.config();
 
