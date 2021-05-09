@@ -2,7 +2,9 @@ import express from "express";
 import morgan from "morgan";
 import helmet from "helmet";
 import passport from "passport";
+import mongoose from "mongoose";
 import session from "express-session";
+import MongoStore from "connect-mongo";
 import cookieParser from "cookie-parser";
 import userRouter from "./routers/userRouter.js";
 import videoRouter from "./routers/videoRouter.js";
@@ -27,7 +29,8 @@ app.use(
     session({
         secret: process.env.COOKIE_SECRET,
         resave: true,
-        saveUninitialized: false
+        saveUninitialized: false,
+        store: MongoStore.create({ mongoUrl: process.env.MONGO_URL })
     })
 )
 app.use(passport.initialize());
