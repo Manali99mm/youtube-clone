@@ -7,7 +7,7 @@
         display: flex;
         flex-direction: column;
         align-items: center;
-        margin-bottom: 15px;
+        margin-bottom: 20px;
         .profile__username {
             margin-top: 15px;
             font-size: 18px;
@@ -18,6 +18,9 @@
         flex-direction: column;
         align-items: center;
         a:not(:last-child) {
+            margin-bottom: 20px;
+        }
+        a:last-child {
             margin-bottom: 20px;
         }
     }
